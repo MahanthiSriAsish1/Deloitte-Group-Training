@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Employee Management System</h1>
+
+        <!-- Department Form -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>Add Department</h5>
+            </div>
+            <div class="card-body">
+                <form id="departmentForm" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="departmentName">Department Name</label>
+                        <input type="text" class="form-control" id="departmentName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="departmentLocation">Location</label>
+                        <input type="text" class="form-control" id="departmentLocation" required>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="addDepartment()">Add Department</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Employee Form -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>Add Employee</h5>
+            </div>
+            <div class="card-body">
+                <form id="employeeForm" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="employeeName">Employee Name</label>
+                        <input type="text" class="form-control" id="employeeName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employeeSalary">Salary</label>
+                        <input type="number" class="form-control" id="employeeSalary" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="departmentSelect">Department</label>
+                        <select class="form-control" id="departmentSelect" required></select>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="addEmployee()">Add Employee</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Employees Table -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>Employees List</h5>
+            </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-secondary mb-3" onclick="fetchEmployees()">Refresh Employees List</button>
+                <table class="table table-bordered" id="employeesTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

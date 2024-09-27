@@ -1,0 +1,15 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.table th, .table td {
+    text-align: center;
+}
