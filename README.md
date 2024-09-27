@@ -15,7 +15,6 @@ The **Employee Management System (EMS)** is a comprehensive web application desi
 - [API Endpoints](#api-endpoints)
 - [Frontend Details](#frontend-details)
 - [Backend Details](#backend-details)
-- [Contributing](#contributing)
 
 ## Features
 
